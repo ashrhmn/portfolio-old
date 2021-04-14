@@ -75,7 +75,7 @@ export default {
   },
   data: function () {
     return {
-      word: "Skill",
+      word: "",
       whatIdoData: [
         {
           icon: "/svg/whatIdo/copywrite.svg",
