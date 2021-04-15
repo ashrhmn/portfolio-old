@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import ContactItem from "../components/ContactItem.vue";
-import InstantMessage from "../components/InstantMessage.vue";
+import ContactItem from "../components/Contact/ContactItem.vue";
+import InstantMessage from "../components/Contact/InstantMessage.vue";
 import locationMarker from "../assets/svg/contact/locationMarker.vue";
 import mail from "../assets/svg/contact/mail.vue";
 import phone from "../assets/svg/contact/phone.vue";
