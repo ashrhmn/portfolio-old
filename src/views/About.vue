@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import whatIdos from "../components/WhatIdos.vue";
+import whatIdos from "../components/About/WhatIdos.vue";
 const words = [
   "Web Developer",
   "Web Designer",

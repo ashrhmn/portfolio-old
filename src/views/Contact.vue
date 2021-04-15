@@ -32,15 +32,6 @@ import mail from "../assets/svg/contact/mail.vue";
 import phone from "../assets/svg/contact/phone.vue";
 import { markRaw } from "@vue/reactivity";
 
-const words = [
-  "Web Developer",
-  "Web Designer",
-  "Java App Developer",
-  "UI/UX Designer",
-];
-
-// const ic = markRaw(locationMarker)
-
 export default {
   components: {
     ContactItem,
@@ -77,15 +68,5 @@ export default {
     };
   },
 
-  methods: {
-    updateWord: function () {
-      this.word = words[Math.floor(Math.random() * words.length)];
-    },
-  },
-
-  mounted: function () {
-    this.updateWord();
-    setInterval(this.updateWord, 4000);
-  },
 };
 </script>
