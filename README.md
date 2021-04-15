@@ -6,12 +6,12 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads for Development
 ```
 npm run dev
 ```
 
-### Compiles and minifies for production
+### Compiles and minifies for Deploy
 ```
 npm run build
 ```
