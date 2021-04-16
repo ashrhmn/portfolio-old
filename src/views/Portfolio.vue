@@ -9,7 +9,7 @@
       <div
         class="text-left pl-10 text-gray-500 md:text-right text-md md:text-2xl md:pr-10 pb-5"
       >
-        Get in touch
+        My Projects
       </div>
 
       <div v-for="data in projectData" :key="data.title" class="project">
@@ -64,6 +64,37 @@ export default {
           },
         ],
         contents:[]
+      },{
+        minTitle: "Built with Vue",
+        title: "A web app to manage your Mill",
+        intro:
+          "2Utility classes help you work within the constraints of a system instead of littering your stylesheets with arbitrary values. They make it easy to be consistent with color choices, spacing, typography, shadows, and everything else that makes up a well-engineered design system",
+        assets: [
+          {
+            image: "https://i.imgur.com/fHwSJm4.png",
+            desc: "21All the customers in your Mill/Company",
+          },
+          {
+            image: "https://i.imgur.com/ze1KzFy.png",
+            desc: "21All the 32423s in your Mill/Company",
+          },
+          {
+            image: "https://i.imgur.com/mP3rQ6J.png",
+            desc: "21All the custom436346our Mill/Company",
+          },
+          {
+            image: "https://i.imgur.com/rdLAnWd.png",
+            desc: "21All t345345mers in your Mill/Company",
+          },
+          {
+            image: "https://i.imgur.com/4jzL4RS.png",
+            desc: "21All the customers in45645ill/Company",
+          },
+        ],
+        contents:[
+          "Some additional Informantion",
+          "Some additional Informantion2",
+        ]
       },
       {
         minTitle: "Built with Java2",

@@ -1,5 +1,5 @@
 <template>
-  <div class="m-5">
+  <div class="m-5 pt-10">
     <div class="text-left text-2xl">{{ pData.minTitle }}</div>
     <div class="text-left text-4xl">{{ pData.title }}</div>
     <div class="text-left text-lg">{{ pData.intro }}</div>
