@@ -12,7 +12,7 @@
       <div class="text-lg">{{ pData.assets[selectedIndex].desc }}</div>
     </div>
 
-    <div class="flex w-40 mx-auto">
+    <div class="flex mx-auto" :style="{width:((pData.assets.length)*20)+'px'}">
       <div
         v-for="(asset, index) in pData.assets"
         :key="asset.desc"
@@ -92,6 +92,7 @@ export default {
 .flex-container {
   height: 300px;
 }
+
 
 @media screen and (min-width: 768px) {
   .im {
