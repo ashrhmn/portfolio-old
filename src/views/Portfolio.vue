@@ -35,31 +35,31 @@ export default {
           "2Utility classes help you work within the constraints of a system instead of littering your stylesheets with arbitrary values. They make it easy to be consistent with color choices, spacing, typography, shadows, and everything else that makes up a well-engineered design system",
         assets: [
           {
-            image: "src/assets/Portfolio/Project/CalendarMillJava/asset1.png",
+            image: "https://i.imgur.com/p1TbIlb.png",
             desc: "21All the customers in your Mill/Company",
           },
           {
-            image: "src/assets/Portfolio/Project/CalendarMillJava/asset2.png",
+            image: "https://i.imgur.com/d0A98Qn.png",
             desc: "21All the 32423s in your Mill/Company",
           },
           {
-            image: "src/assets/Portfolio/Project/CalendarMillJava/asset3.png",
+            image: "https://i.imgur.com/KB4G47D.png",
             desc: "21All the custom436346our Mill/Company",
           },
           {
-            image: "src/assets/Portfolio/Project/CalendarMillJava/asset4.png",
+            image: "https://i.imgur.com/nOKBDWT.png",
             desc: "21All t345345mers in your Mill/Company",
           },
           {
-            image: "src/assets/Portfolio/Project/CalendarMillJava/asset5.png",
+            image: "https://i.imgur.com/qcMdZho.png",
             desc: "21All the customers in45645ill/Company",
           },
           {
-            image: "src/assets/Portfolio/Project/CalendarMillJava/asset6.png",
+            image: "https://i.imgur.com/nGnRbst.png",
             desc: "21All th34534ers in your Mill/Company",
           },
           {
-            image: "src/assets/Portfolio/Project/CalendarMillJava/asset7.png",
+            image: "https://i.imgur.com/xm1rqXL.png",
             desc: "21All the customers i456457Mill/Company",
           },
         ],
@@ -67,16 +67,16 @@ export default {
       },
       {
         minTitle: "Built with Java2",
-        title: "A program to manage your Mill",
+        title: "A program to manage your Company",
         intro:
           "Utility classes help you work within the constraints of a system instead of littering your stylesheets with arbitrary values. They make it easy to be consistent with color choices, spacing, typography, shadows, and everything else that makes up a well-engineered design system",
         assets: [
           {
-            image: "src/assets/Portfolio/Project/CalendarMillJava/proj1.png",
+            image: "https://i.imgur.com/xm1rqXL.png",
             desc: "331All the customers in your Mill/Company",
           },
           {
-            image: "src/assets/Portfolio/Project/CalendarMillJava/proj1.png",
+            image: "https://i.imgur.com/nGnRbst.png",
             desc: "332All the customers in your Mill/Company",
           },
         ],
