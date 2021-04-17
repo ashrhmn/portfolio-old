@@ -14,8 +14,8 @@
                 </p>
               </transition>
               <br />
-              <h1 class="text-4xl md:text-6xl md:text-left font-bold">
-                <span class="text-green-900">Ashik</span>
+              <h1 class="text-4xl md:text-6xl md:text-left font-bold animate__animated animate__bounce">
+                <span class="text-blue-900">Ashik</span>
                 Rahman
               </h1>
               <br />
@@ -59,7 +59,7 @@
         </div>
       </div>
       <div>
-        <!-- <card-component/> -->
+        <edu-info :infoData="eduInfoData"/>
       </div>
     </div>
   </div>
@@ -68,7 +68,7 @@
 <script>
 import whatIdos from "../components/About/WhatIdos.vue";
 
-// import CardComponent from '../components/About/CardComponent.vue'
+import EduInfo from '../components/About/EduInfo.vue'
 const words = [
   "Web Developer",
   "Web Designer",
@@ -79,6 +79,7 @@ const words = [
 export default {
   components: {
     whatIdos,
+    EduInfo,
     // CardComponent
   },
   data: function () {
@@ -110,6 +111,32 @@ export default {
             "Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex.",
         },
       ],
+      eduInfoData:[
+        {
+          icon:'Icon01',
+          Institute:'American International University-Bangladesh',
+          subject:'Bachelor of Science in Computer Science and Engineering',
+          timePeriod:'2018-Studying Present'
+        },
+        {
+          icon:'Icon02',
+          Institute:'Shahzadpur Government College',
+          subject:'Science',
+          timePeriod:'2015-2017'
+        },
+        {
+          icon:'Icon03',
+          Institute:'Rangdhanu Kinder Garten & Model High School',
+          subject:'Science',
+          timePeriod:'2004-2014'
+        },
+        {
+          icon:'Icon04',
+          Institute:'Radiate English Medium School',
+          subject:'Primary',
+          timePeriod:'2002-2003'
+        }
+      ]
     };
   },
 

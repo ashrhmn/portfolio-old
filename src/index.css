@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+    @variants responsive {
+        .w-845p {
+            width: 845px;
+        }
+        .w-430p {
+            width: 430px;
+        }
+    }
+}
