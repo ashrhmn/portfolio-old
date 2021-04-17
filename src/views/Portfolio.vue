@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-gradient-to-br from-green-400 to-cyan-500">
+    <div class="">
       <div
         class="pt-20 pl-10 text-3xl font-bold md:text-6xl text-left underline"
       >

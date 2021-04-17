@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-gradient-to-br from-green-400 to-cyan-500">
+    <div class="">
       <div class="pt-40 max-w-5xl mx-auto">
         <div class="mx-auto md:flex flex-col md:flex-row">
           <div class="p-2 flex-none mx-auto h-80 w-80">
@@ -8,9 +8,11 @@
           </div>
           <div>
             <div class="flex-grow pl-10 pr-10">
-              <p class="md:text-left text-2xl md:text-4xl font-semibold animate-pulse">
-                {{ word }}
-              </p>
+              <transition name="fade" mode="out-in">
+                <p class="md:text-left text-2xl md:text-4xl font-semibold" :key="word">
+                  {{ word }}
+                </p>
+              </transition>
               <br />
               <h1 class="text-4xl md:text-6xl md:text-left font-bold">
                 <span class="text-green-900">Ashik</span>
@@ -56,12 +58,16 @@
           </div>
         </div>
       </div>
+      <div>
+        <!-- <card-component/> -->
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import whatIdos from "../components/About/WhatIdos.vue";
+// import CardComponent from '../components/About/CardComponent.vue'
 const words = [
   "Web Developer",
   "Web Designer",
@@ -72,6 +78,7 @@ const words = [
 export default {
   components: {
     whatIdos,
+    // CardComponent
   },
   data: function () {
     return {
@@ -113,7 +120,19 @@ export default {
 
   mounted: function () {
     this.updateWord();
-    setInterval(this.updateWord, 1500);
+    setInterval(this.updateWord, 3000);
   },
 };
 </script>
+
+<style>
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
+}
+</style>

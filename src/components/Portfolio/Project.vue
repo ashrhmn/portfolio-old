@@ -5,14 +5,29 @@
     <div class="text-left text-lg">{{ pData.intro }}</div>
 
     <div class="mx-auto flex-container flex-col">
-      <img
-        class="pt-10 assetImage mx-auto"
-        :src="pData.assets[selectedIndex].image"
-      />
-      <div class="text-lg">{{ pData.assets[selectedIndex].desc }}</div>
+      <div>
+        <transition
+          name="fade"
+          mode="out-in"
+          enter-active-class="animate__animated animate__fadeInRight"
+          leave-active-class="animate__animated animate__fadeOutLeft"
+        >
+          <img
+            class="pt-10 assetImage mx-auto"
+            :src="pData.assets[selectedIndex].image"
+            :key="pData.assets[selectedIndex].image"
+            style="animation-duration: 0.35s"
+          />
+        </transition>
+
+        <div class="text-lg">{{ pData.assets[selectedIndex].desc }}</div>
+      </div>
     </div>
 
-    <div class="flex mx-auto" :style="{width:((pData.assets.length)*20)+'px'}">
+    <div
+      class="flex mx-auto"
+      :style="{ width: pData.assets.length * 20 + 'px' }"
+    >
       <div
         v-for="(asset, index) in pData.assets"
         :key="asset.desc"
@@ -52,17 +67,19 @@ export default {
 
   mounted: function () {
     this.changeImage();
-    setInterval(this.changeImage, 7000);
+    this.thread = setInterval(this.changeImage, 7000);
   },
   data: () => {
     return {
       selectedIndex: 0,
+      thread:null
     };
   },
 };
 </script>
 
 <style>
+
 .im {
   min-width: 20rem;
 }
@@ -85,6 +102,7 @@ export default {
 }
 .assetImage {
   max-height: 250px;
+  /* position: absolute; */
 }
 .assetImage-container {
   height: 17rem;
@@ -92,7 +110,6 @@ export default {
 .flex-container {
   height: 300px;
 }
-
 
 @media screen and (min-width: 768px) {
   .im {
