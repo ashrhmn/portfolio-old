@@ -67,6 +67,7 @@
 
 <script>
 import whatIdos from "../components/About/WhatIdos.vue";
+
 // import CardComponent from '../components/About/CardComponent.vue'
 const words = [
   "Web Developer",
@@ -82,7 +83,7 @@ export default {
   },
   data: function () {
     return {
-      word: "",
+      word: "Web Developer",
       whatIdoData: [
         {
           icon: "/svg/whatIdo/copywrite.svg",

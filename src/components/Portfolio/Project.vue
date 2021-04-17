@@ -8,19 +8,17 @@
       <div>
         <transition
           name="fade"
-          mode="out-in"
-          enter-active-class="animate__animated animate__fadeInRight"
-          leave-active-class="animate__animated animate__fadeOutLeft"
+          :enter-active-class="imgEnterTransition"
+          :leave-active-class="imgLeaveTransition"
         >
-          <img
-            class="pt-10 assetImage mx-auto"
-            :src="pData.assets[selectedIndex].image"
-            :key="pData.assets[selectedIndex].image"
-            style="animation-duration: 0.35s"
-          />
+          <div class="image-container" :key="pData.assets[selectedIndex].image">
+            <img
+              class="pt-10 assetImage mx-auto"
+              :src="pData.assets[selectedIndex].image"
+            />
+            <div class="text-lg">{{ pData.assets[selectedIndex].desc }}</div>
+          </div>
         </transition>
-
-        <div class="text-lg">{{ pData.assets[selectedIndex].desc }}</div>
       </div>
     </div>
 
@@ -34,7 +32,7 @@
         class="mx-auto"
       >
         <button
-          @click="selectedIndex = index"
+          @click="changeImageWithBtn(index)"
           :class="{ 'btn-flex-active': isActive(index) }"
           class="btn-flex custom-control"
         ></button>
@@ -57,11 +55,23 @@ export default {
       return index == this.selectedIndex;
     },
     changeImage() {
+      this.imgEnterTransition = "animate__animated animate__fadeInRight";
+      this.imgLeaveTransition = "animate__animated animate__fadeOutLeft";
       if (this.pData.assets.length - 1 == this.selectedIndex) {
         this.selectedIndex = 0;
       } else {
         this.selectedIndex++;
       }
+    },
+    changeImageWithBtn(index) {
+      if (index < this.selectedIndex) {
+        this.imgEnterTransition = "animate__animated animate__fadeInLeft";
+        this.imgLeaveTransition = "animate__animated animate__fadeOutRight";
+      } else {
+        this.imgEnterTransition = "animate__animated animate__fadeInRight";
+        this.imgLeaveTransition = "animate__animated animate__fadeOutLeft";
+      }
+      this.selectedIndex = index;
     },
   },
 
@@ -72,14 +82,15 @@ export default {
   data: () => {
     return {
       selectedIndex: 0,
-      thread:null
+      thread: null,
+      imgEnterTransition: "animate__animated animate__fadeInRight",
+      imgLeaveTransition: "animate__animated animate__fadeOutLeft",
     };
   },
 };
 </script>
 
 <style>
-
 .im {
   min-width: 20rem;
 }
@@ -102,13 +113,22 @@ export default {
 }
 .assetImage {
   max-height: 250px;
-  /* position: absolute; */
+  /* position: absolute center; */
+  /* margin: 0 auto; */
 }
 .assetImage-container {
   height: 17rem;
 }
 .flex-container {
   height: 300px;
+  /* position: absolute; */
+}
+
+.image-container {
+  animation-duration: 0.5s;
+  position: absolute;
+  left: 100px;
+  right: 100px;
 }
 
 @media screen and (min-width: 768px) {
