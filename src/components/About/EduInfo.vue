@@ -109,7 +109,7 @@ export default {
   border-color: red; */
   color: aliceblue;
   outline: none !important;
-  @apply border-4 border-yellow-500
+  @apply border-4 border-purple-400
 }
 
 .navigatorActive {
@@ -120,13 +120,13 @@ export default {
   border-radius: 10rem;
   color: aliceblue;
   outline: none !important;
-  @apply border-4 border-yellow-500 bg-yellow-500
+  @apply border-4 border-purple-400 bg-purple-500
 }
 
 .mainItem {
   width: 400px;
   height: 200px;
-  @apply bg-green-400 m-4 p-4;
+  @apply m-4 p-4 shadow-lg bg-purple-100;
 }
 .container-main {
   width: 860px;

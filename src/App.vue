@@ -1,22 +1,24 @@
 <template>
-  <div class="float-left">
-    <img class="h-20 w-25" src="./assets/logo.png" />
+  <div>
+    <div class="float-left">
+      <img class="h-20 w-25" src="./assets/logo.png" />
+    </div>
+    <div class="float-right pr-10" id="nav">
+      <router-link to="/">About Me</router-link> |
+      <router-link to="/contact">Contact</router-link> |
+      <router-link to="/portfolio">Portfolio</router-link> |
+    </div>
+    <router-view v-slot="{ Component }">
+      <transition
+        enter-active-class="animate__animated animate__fadeIn"
+        leave-active-class="animate__animated animate__fadeOut"
+        mode="out-in"
+        style="animation-duration: 0.15s"
+      >
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
-  <div class="float-right pr-10" id="nav">
-    <router-link to="/">About Me</router-link> |
-    <router-link to="/contact">Contact</router-link> |
-    <router-link to="/portfolio">Portfolio</router-link> |
-  </div>
-  <router-view v-slot="{ Component }">
-    <transition
-      enter-active-class="animate__animated animate__fadeIn"
-      leave-active-class="animate__animated animate__fadeOut"
-      mode="out-in"
-      style="animation-duration: 0.15s"
-    >
-      <component :is="Component" />
-    </transition>
-  </router-view>
 </template>
 
 <script setup>
@@ -34,6 +36,7 @@
   text-align: center;
   color: #2c3e50;
   /* margin-top: 60px; */
+  background: hsl(0, 0%, 94%);
 }
 
 #nav {
@@ -47,7 +50,11 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  /* color: #42b983; */
+  color: #3ba3dc;
+  /* color: #3beefa; */
+  font-weight: 800;
+  text-decoration-line: underline;
 }
 
 .page {

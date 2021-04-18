@@ -39,7 +39,7 @@
         </div>
         <div class="p-2">
           <button
-            class="border-2 border-indigo-800 bg-blue-600 text-white hover:bg-blue-800 text-2xl rounded-lg p-2"
+            class="border-2 border-indigo-800 bg-blue-500 text-white hover:bg-blue-800 text-2xl rounded-lg p-2"
             type="submit"
           >
             Send Message

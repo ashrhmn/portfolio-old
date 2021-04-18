@@ -115,7 +115,7 @@ export default {
         {
           icon:'Icon01',
           Institute:'American International University-Bangladesh',
-          subject:'Bachelor of Science in Computer Science and Engineering',
+          subject:'BSc in Computer Science and Engineering',
           timePeriod:'2018-Studying Present'
         },
         {
