@@ -15,3 +15,5 @@ npm run dev
 ```
 npm run build
 ```
+
+### The app is being hosted on ashik.amarsite.net
