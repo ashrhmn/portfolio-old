@@ -16,4 +16,4 @@ npm run dev
 npm run build
 ```
 
-### The app is being hosted on [a link](https://ashik.amarsite.net)
+### The app is being hosted on [Ashik Rahman](https://ashik.amarsite.net)
